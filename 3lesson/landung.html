@@ -67,7 +67,66 @@
         *{
             padding:0;
             margin:0;
+        }.section_main{
+            padding: 120px 0;
+        }.section_header{
+            text-algin: center;
         }
+        h1{
+            font-size:36px;
+            coor:#222222
+        }
+        .product-card-warp{
+            padding: 15px;
+            width: 25%;
+        }
+        .product-card{
+            min-width:255px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow:0px 10px 30px 0px rgba(212,150,255,0,2)
+        }
+        .product-card_image-warp{
+            padding: 40px;
+            border-bottom: 1px solid #eee;
+        }
+        .product-card_details{
+            padding:20px;
+            background-color: #f9f9ff;
+        }
+        h4{
+            font-size: 18px;
+        }
+        .product-card_button{
+            dissplay: inline-block;
+            text-decoration: none;
+            margin-top:10px;
+            background: #fff;
+            color: #222 !important;
+            font-weight: 600;
+            line-height: 42px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 1px solid transparent;
+            cursor:pointer;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .footer{
+            background: url(img/footer-bg.jpg);
+            background-size: cover;
+            padding-top: 100px;
+            padding-bottom:120px; 
+        }
+        .footer-block_last{
+            padding-top: 120px;
+            color:white;
+        }
+        .copyright{
+            padding: 0 15px;
+        }
+        
 
     </style>
     <header class="header">
@@ -112,11 +171,29 @@
             <div class="container">
                 <div class="section_header"><h1>Feature Roboticks Products to Show</h1>
                 <p>Who aare in extremely love width eco friendly system.</p></div>
+                <div class="product-card-container">
+                    <div class="product-card-warp">
+                        <div class="product-card">
+                            <div class="product-card_image-warp"><img class="product-card_image" src="img/l5.png"></div>
+                            <div class="product-card_details">
+                                <h4 class="product-card_header">The Upper Eye</h4>
+                                <p class="product-card_text">Who are extremely love with eco friendly system</p>
+                                <a class="product-card_button" href="#">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
+        <div class="container">
+            <div class="footer-block footer-block_last">
+                <div class="copyright">Copyright 2018 All right reserved By Rogv-kostya</div>
+            </div>
+        </div>
+
     </footer>
 
 
