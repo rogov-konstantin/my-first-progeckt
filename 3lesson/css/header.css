@@ -1,0 +1,13 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu-nav{
+    display: flex;
+    flex-direction: row;
+}
+.menu-nav-items{
+    display: flex;
+    margin: 5px;
+}
