@@ -4,7 +4,7 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-    <title>ДЗ</title> 
+    <title>ДЗ 2</title> 
 <style> 
     .f1{ 
         background-color: rgb(93, 43, 150); 
@@ -30,7 +30,7 @@
         max-width: 400px; 
     } 
     .f5{ 
-        font-size: 20px; 
+        font-size: 15px; 
         margin-left: 120px; 
     } 
     #text{ 
@@ -39,7 +39,7 @@
         color: black;
     } 
     #item{ 
-        background-color: green;  
+        background-color: yellow;  
         padding-bottom: 5px;
         width: 1.6px; 
     } 
@@ -58,14 +58,16 @@
     </div>
 
     <script> 
-        var text = document.getElementById('text'); 
+        var text = document.getElementById('text');
+        var item = document.getElementById('item');
         var a = 0; 
         var timerId = setInterval(function() { 
             var start = Date.now();                     // сохранить время начала 
             var timer = setInterval(function() { 
                                                         // вычислить сколько времени прошло из opts.duration 
                 var timePassed = Date.now() - start; 
-                text.style.left = timePassed / 100 + 'px' ; 
+                text.style.left = timePassed / 200 + 'px' ;
+                item.style.left = timePassed / 100 + 'px'; 
                 if (timePassed > 100000) clearInterval(timer); 
             }, 1000); 
             a = a + 1 
@@ -73,18 +75,9 @@
         }, 1000);                                       //сжвиг прцента составит 7.1px 
         setTimeout(function() { 
             clearInterval(timerId); 
-            alert( 'Загрузка завершена' ); 
-        }, 100000); 
+            alert( 'Загрузка завершена' );
 
-        text.onclick = function() { 
-            var start = Date.now();                     // сохранить время начала 
-            var timer = setInterval(function() { 
-                                                        // вычислить сколько времени прошло из opts.duration 
-                var timePassed = Date.now() - start; 
-                text.style.left = timePassed / 100 + 'px' ; 
-                if (timePassed > 10000) clearInterval(timer); 
-            }, 1000); 
-        } 
+        }, 100000);  
 
     </script> 
 
