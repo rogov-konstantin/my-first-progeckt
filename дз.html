@@ -7,7 +7,7 @@
     <title>ДЗ</title>
     <style>
         .f1{
-            background-color: green;
+            background-color: rgb(9, 68, 117);
             height: 860px;
             width: 640px;
             margin-left: 350px;
@@ -30,7 +30,7 @@
             max-width: 400px;     
         }
         .f5{
-            font-size: 20px;
+            font-size: 15px;
             margin-left: 120px;
         }
         #text{
@@ -39,132 +39,50 @@
             position: relative;
         }
         #item{
-            background-color: yellow;
-            color: blacks;
+            background-color: green;
             padding-bottom: 5px;
+            width: 1.6px;
         }
     </style>
     
     
 </head>
 <body>
+    <div class="l1">
         <div class="f1">    
-                <p class="f3"></p>
-                <p class="f5" id="text">0%</p>
-                <div class="f2">
-                    <div class="container">
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-                        <div id="item">a</div>
-
-                    </div>
+            <p class="f3"></p>
+            <p class="f5" id="text">0%</p>
+            <div class="f2">
+                <div class="container">
+                    <div id="document"></div>
                 </div>
-                
-                
-                <script>
-                    var text = document.getElementById('text');
-                    var a = 0;
-                    var timerId = setInterval(function() {
-                        var start = Date.now(); // сохранить время начала
-
-                        var timer = setInterval(function() {
-                        // вычислить сколько времени прошло из opts.duration
-                        var timePassed = Date.now() - start;
-
-                        text.style.left = timePassed / 100 + 'px' ;
-
-                        if (timePassed > 10000) clearInterval(timer);
-
-                        }, 1000);
-                    
-                        
-                        a = a + 1
-                        text.innerHTML = a + "%" ;
-                        }, 1000); //сжвиг прцента составит 7.1px
-                     setTimeout(function() {
-                        clearInterval(timerId);
-                        alert( 'Загрузка завершена' );
-                    }, 100000);
-
-
-
-
-
-                    text.onclick = function() {
-                        var start = Date.now(); // сохранить время начала
-
-                        var timer = setInterval(function() {
-                        // вычислить сколько времени прошло из opts.duration
-                        var timePassed = Date.now() - start;
-
-                        text.style.left = timePassed / 100 + 'px' ;
-
-                        if (timePassed > 10000) clearInterval(timer);
-
-                        }, 1000);
-                    }
-
-                </script>
-
-
-
-
-
-
-
+            </div>
+        </div>
+    </div>          
     
+    <script>
+        var text = document.getElementById('text');
+        var a = 0;
+        var timerId = setInterval(function() {
+            var start = Date.now();                         // сохранить время начала
+            var timer = setInterval(function() {
+                var timePassed = Date.now() - start;        // вычислить сколько времени прошло из opts.duratio
+                text.style.left = timePassed / 200 + 'px';
+            }, 1000);    
+            a = a + 1;
+            item.style.wdith += 1.6 ;
+            text.innerHTML = a + "%" ;
+        }, 1000);                                           //эта функция двигает и увеличивает проценты. 
+
+        setTimeout(function() {
+            clearInterval(timerId);
+            a = 0;
+            text.style.padding = 120  ;
+            alert( 'Загрузка завершена' );
+        }, 100000);
+                                                            //останавливает счётчик
+        
+    </script>
 
 </body>
 </html>

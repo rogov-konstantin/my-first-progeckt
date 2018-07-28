@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>ДЗ</title> 
+<style> 
+    .f1{ 
+        background-color: rgb(93, 43, 150); 
+        height: 860px; 
+        width: 640px; 
+        margin-left: 350px; 
+    } 
+    .f2{ 
+        border: 5px solid red; 
+        width: 391px; 
+        margin-left: 120px; 
+    } 
+    .f3{ 
+        height: 410px; 
+        color: green; 
+    } 
+    .container{ 
+        display: flex; 
+        flex-wrap: nowrap; 
+        height: 15px; 
+        width: 160px; 
+        color: green; 
+        max-width: 400px; 
+    } 
+    .f5{ 
+        font-size: 20px; 
+        margin-left: 120px; 
+    } 
+    #text{ 
+        cursor: pointer; 
+        position: relative;
+        color: black;
+    } 
+    #item{ 
+        background-color: green;  
+        padding-bottom: 5px;
+        width: 1.6px; 
+    } 
+</style> 
+
+</head> 
+<body> 
+    <div class="f1"> 
+        <p class="f3"></p> 
+        <p class="f5" id="text">0%</p> 
+        <div class="f2"> 
+            <div class="container"> 
+                <div id="item"></div>  
+            </div> 
+        </div> 
+    </div>
+
+    <script> 
+        var text = document.getElementById('text'); 
+        var a = 0; 
+        var timerId = setInterval(function() { 
+            var start = Date.now();                     // сохранить время начала 
+            var timer = setInterval(function() { 
+                                                        // вычислить сколько времени прошло из opts.duration 
+                var timePassed = Date.now() - start; 
+                text.style.left = timePassed / 100 + 'px' ; 
+                if (timePassed > 100000) clearInterval(timer); 
+            }, 1000); 
+            a = a + 1 
+            text.innerHTML = a + "%" ; 
+        }, 1000);                                       //сжвиг прцента составит 7.1px 
+        setTimeout(function() { 
+            clearInterval(timerId); 
+            alert( 'Загрузка завершена' ); 
+        }, 100000); 
+
+        text.onclick = function() { 
+            var start = Date.now();                     // сохранить время начала 
+            var timer = setInterval(function() { 
+                                                        // вычислить сколько времени прошло из opts.duration 
+                var timePassed = Date.now() - start; 
+                text.style.left = timePassed / 100 + 'px' ; 
+                if (timePassed > 10000) clearInterval(timer); 
+            }, 1000); 
+        } 
+
+    </script> 
+
+
+</body> 
+</html>
